@@ -1,0 +1,9 @@
+<c-dropdown
+  size="small"
+  [items]="dropdownItems"
+  list-size="4"
+  toggle-text="Select an Item"
+  filter-placeholder="Select an Item"
+  (itemSelected)="agOnItemSelected($any($event))"
+>
+</c-dropdown>

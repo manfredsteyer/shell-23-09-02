@@ -1,0 +1,13 @@
+// This is where specific applications can override ag-grid styles
+.ag-grid-component-style {
+  width: 100%;
+  height: 560px;
+}
+
+// Shouldn't be needed but leaving it here in case
+.ag-numbers {
+  display: flex;
+  justify-content: flex-end;
+  font-family: var(--font-family-mono);
+  font-weight: 500;
+}

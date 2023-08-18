@@ -1,0 +1,17 @@
+{
+  "comments": "These values should be for local development. During deployment, the contents of this file are replaced by the ConfigMap in k8s/deployment.yaml",
+  "environment": "local",
+  "timeoutMinutes": 60,
+  "versionNumber": 1,
+  "apiUrl": "https://your-api-goes-here.com/api",
+  "secureApis": ["https://your-api-goes-here.com/api"],
+  "unsecureEndpoints": ["https://your-api-goes-here.com/api/some-unsecure-endpoint"],
+  "okta": {
+    "issuer": "https://login-staging.oauth2.com/oauth2/default",
+    "redirectUri": "http://localhost:5000/callback",
+    "clientId": "123456789",
+    "postLogoutRedirectUri": "http://localhost:5000/login",
+    "scopes": [],
+    "pkce": true
+  }
+}

@@ -1,0 +1,18 @@
+c-tag {
+  --c-tag-min-width: 84px;
+  &.male {
+    --c-tag-background-color: var(--color-primary-navy);
+    --c-tag-border-color: var(--color-primary-navy);
+    --c-tag-text-color: var(--color-neutral-white);
+  }
+  &.female {
+    --c-tag-background-color: var(--color-secondary-ginza);
+    --c-tag-border-color: var(--color-secondary-ginza);
+    --c-tag-text-color: var(--color-neutral-white);
+  }
+  &.not-specified {
+    --c-tag-background-color: var(--color-secondary-metal);
+    --c-tag-border-color: var(--color-secondary-metal);
+    --c-tag-text-color: var(--color-neutral-white);
+  }
+}

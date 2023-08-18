@@ -1,0 +1,126 @@
+@use '../../../../node_modules/ag-grid-community/styles/' as ag;
+
+$icons: aggregation, arrows, asc, cancel, chart, checkbox-checked, checkbox-indeterminate, checkbox-unchecked, color-picker, column, columns,
+  contracted, copy, cross, cut, data, desc, expanded, eye-slash, eye, filter, first, grip, group, indeterminate, last, left, loading, maximize, menu,
+  minimize, minus, next, none, not-allowed, paste, pin, pivot, plus, previous, radio-button-off, radio-button-on, right, save, small-down, small-left,
+  small-right, small-up, tick, tree-closed, tree-indeterminate, tree-open;
+
+$icon-path: '/assets/grid-svgs/';
+
+@mixin icon-background($path, $icon, $size) {
+  background: url('#{$path}#{$icon}.svg') no-repeat;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: $size $size;
+  height: $size;
+  width: $size;
+}
+
+@include ag.grid-styles(
+  (
+    theme: belham,
+  )
+);
+.ag-theme-balham {
+  --ag-belham-active-color: var(--color-table-background-hightlight);
+  --ag-selected-row-background-color: var(--color-table-background-hightlight);
+  --ag-background-color: var(--color-neutral-white);
+  --ag-font-family: var(--font-family-default);
+  --ag-borders: none;
+  --ag-border-color: var(--color-neutral-gallery);
+  --ag-cell-horizontal-padding: var(--spacing-l);
+  --ag-cell-horizontal-border: 0px solid transparent;
+  --ag-foreground-color: var(--color-neutral-black);
+  --ag-grid-size: var(--spacing-xs);
+  --ag-icon-size: var(--spacing-l);
+  --ag-header-background-color: var(--color-neutral-white);
+  --ag-header-foreground-color: var(--color-neutral-black);
+  --ag-header-height: 48px;
+  --ag-odd-row-background-color: var(--color-table-background-stripe);
+  --ag-range-selection-border-color: var(--color-primary-navy);
+  --ag-range-selection-background-color: var(--color-semantic-info-background-default);
+  --ag-row-height: 44px;
+  --ag-row-border-color: transparent;
+  --ag-row-hover-color: var(--color-table-background-hightlight);
+  --ag-popup-shadow: 0 0 4px rgba(189, 189, 189, 0.07);
+  --ag-font-size: var(--size-font-body-default);
+  --ag-checkbox-background-color: var(--color-neutral-white);
+  --ag-checkbox-checked-color: var(--color-primary-navy);
+  --ag-checkbox-indeterminate-color: var(--color-tertiary-charcoal-20);
+
+  .ag-icon {
+    display: inline-block;
+  }
+
+  @each $icon in $icons {
+    .ag-icon.ag-icon-#{$icon} {
+      @include icon-background($icon-path, $icon, 14px);
+      &:before {
+        content: '' !important;
+      }
+    }
+  }
+
+  .ag-icon.ag-icon-row-drag {
+    @include icon-background($icon-path, 'grip', 14px);
+    &:before {
+      content: '' !important;
+    }
+  }
+  .ag-cell-label-container {
+    .ag-icon-asc,
+    .ag-icon-desc,
+    .ag-icon-menu {
+      background-position: 0 2px !important;
+    }
+  }
+
+  .ag-cell {
+    display: flex;
+    align-items: center;
+    line-height: initial;
+  }
+
+  .ag-status-bar {
+    border-top: 1px solid var(--color-primary-navy) !important;
+    background-color: var(--color-semantic-info-background-default) !important;
+    color: var(--color-neutral-black) !important;
+  }
+  .ag-input-field-input {
+    padding: var(--spacing-xs) var(--spacing-l) !important;
+    height: var(--input-height-small, 32px) !important;
+    border: 1px solid var(--color-tertiary-charcoal-20) !important;
+    &::placeholder {
+      color: var(--color-tertiary-charcoal-20);
+      font-style: italic;
+    }
+
+    &:hover {
+      border-color: var(--color-tertiary-charcoal) !important;
+
+      &::placeholder {
+        color: var(--color-tertiary-charcoal);
+      }
+    }
+
+    &:focus {
+      border-color: var(--color-primary-navy) !important;
+      background-color: var(--color-neutral-white) !important;
+      box-shadow: 0 0 0 1px var(--color-primary-navy) !important;
+
+      &::placeholder {
+        color: var(--color-tertiary-charcoal);
+      }
+    }
+  }
+
+  //TODO: override checkbox with carbonate styled checkbox
+  input[type='checkbox'] {
+    clip: unset !important;
+  }
+
+  .ag-row-selected {
+    background-color: var(--color-table-background-hightlight);
+  }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="99px" viewBox="0 0 85 99" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Symbol Color</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.943279074 0.031 49.802617 0.031 49.802617 77.7998 0.943279074 77.7998"></polygon>
+        <polygon id="path-3" points="0.947383031 0.2003 49.8067209 0.2003 49.8067209 77.969 0.947383031 77.969"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logos" transform="translate(-618.000000, -816.000000)">
+            <g id="Symbol-Color" transform="translate(617.000000, 816.000000)">
+                <g id="Group-300" transform="translate(36.000000, 0.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-299"></g>
+                    <path d="M24.8293,56.7728 C21.0833,51.7388 16.6983,48.1118 12.8303,44.9128 C7.0853,40.1598 2.5463,36.4058 1.2603,29.1828 C1.0533,28.0168 0.9553,26.7748 0.9443,25.4828 C0.8713,17.0268 4.7293,6.3678 7.3203,0.0308 C9.0723,2.8038 43.3653,30.8668 49.0353,42.5258 C54.4653,53.6938 29.4183,75.3598 25.8953,77.7998 C25.9323,77.7218 25.9623,77.6478 25.9983,77.5698 C29.3063,70.4628 28.2753,61.4028 24.8293,56.7728" id="Fill-298" fill="#4C7E82" mask="url(#mask-2)"></path>
+                </g>
+                <g id="Group-303" transform="translate(0.000000, 21.000000)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <g id="Clip-302"></g>
+                    <path d="M25.9207,21.2273 C29.6667,26.2613 34.0507,29.8883 37.9187,33.0873 C43.6647,37.8403 48.2037,41.5943 49.4897,48.8173 C49.6967,49.9833 49.7947,51.2253 49.8057,52.5173 C49.8787,60.9733 46.0207,71.6323 43.4297,77.9693 C41.6777,75.1963 7.3847,47.1333 1.7147,35.4743 C-3.7153,24.3063 21.3317,2.6403 24.8547,0.2003 C24.8177,0.2783 24.7877,0.3533 24.7517,0.4303 C21.4437,7.5373 22.4747,16.5973 25.9207,21.2273" id="Fill-301" fill="#4C7E82" mask="url(#mask-4)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
