@@ -1,6 +1,4 @@
-import { User as LoginUser } from '@signifyhealth/angular-common';
-
-export class User extends LoginUser {
+export class User {
     expires?: Date;
     roles?: string[];
     permissions?: string[];
