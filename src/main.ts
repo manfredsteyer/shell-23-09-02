@@ -3,6 +3,10 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 import {AppConfig} from './app/app.config';
+import { loadManifest } from '@angular-architects/module-federation';
+
+loadManifest('assets/mf.manifest.json')
+	.catch(err => console.error('Error loading remote entries', err));
 
 if (environment.production) {
   enableProdMode();

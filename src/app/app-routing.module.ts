@@ -14,11 +14,19 @@ const routes: Routes = [
   { path: 'login/callback', component: OktaCallbackComponent },
   { path: 'login', component: LoginComponent, pathMatch: "full" },
   { path: 'logout', component: LogoutComponent },
+  //{
+  //  path: 'providerattributes',
+  //  loadChildren: () => loadRemoteModule({
+  //    type: 'module',
+  //    remoteEntry: 'http://localhost:8080/remoteEntry.js',
+  //    exposedModule: './Module'
+  //  }).then(m => m.ProviderListModule)
+  //},
   {
     path: 'providerattributes',
     loadChildren: () => loadRemoteModule({
-      type: 'module',
-      remoteEntry: 'http://localhost:8080/remoteEntry.js',
+      type: 'manifest',
+      remoteName: 'providerAttributes',
       exposedModule: './Module'
     }).then(m => m.ProviderListModule)
   },
