@@ -5,7 +5,6 @@ import { CommonModule } from '@angular/common';
 import {RouterModule} from '@angular/router';
 
 import { LoggingService } from '@shared/services';
-import { ThirdPartyModule } from './third-party/third-party.module';
 
 import { AgActionComponent } from '@shared/components/ag-grid/ag-action/ag-action.component';
 import { AgLoadingComponent } from '@shared/components/ag-grid/ag-loading/ag-loading.component';
@@ -35,8 +34,7 @@ const MODULES = [
   HttpClientModule,
   FormsModule,
   ReactiveFormsModule,
-  RouterModule,
-  ThirdPartyModule
+  RouterModule
 ];
 
 @NgModule({
