@@ -6,14 +6,14 @@ import { LoginComponent } from '@shared/components/login/login.component';
 import { HomeComponent } from './home/home.component';
 import { loadRemoteModule } from '@angular-architects/module-federation';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'implicit/callback', component: OktaCallbackComponent },
-  { path: 'callback', component: OktaCallbackComponent },
-  { path: 'login/callback', component: OktaCallbackComponent },
-  { path: 'login', component: LoginComponent, pathMatch: "full" },
-  { path: 'logout', component: LogoutComponent },
+  // { path: 'implicit/callback', component: OktaCallbackComponent },
+  // { path: 'callback', component: OktaCallbackComponent },
+  // { path: 'login/callback', component: OktaCallbackComponent },
+  // { path: 'login', component: LoginComponent, pathMatch: 'full' },
+  // { path: 'logout', component: LogoutComponent },
   //{
   //  path: 'providerattributes',
   //  loadChildren: () => loadRemoteModule({
@@ -22,19 +22,20 @@ const routes: Routes = [
   //    exposedModule: './Module'
   //  }).then(m => m.ProviderListModule)
   //},
-  {
-    path: 'providerattributes',
-    loadChildren: () => loadRemoteModule({
-      type: 'manifest',
-      remoteName: 'providerAttributes',
-      exposedModule: './Module'
-    }).then(m => m.ProviderListModule)
-  },
-  { path: '**', redirectTo: "login" }
+  // {
+  //   path: 'providerattributes',
+  //   loadChildren: () =>
+  //     loadRemoteModule({
+  //       type: 'manifest',
+  //       remoteName: 'providerAttributes',
+  //       exposedModule: './Module',
+  //     }).then((m) => m.ProviderListModule),
+  // },
+  { path: '**', redirectTo: 'home' },
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-})
-export class AppRoutingModule {}
+// @NgModule({
+//   imports: [RouterModule.forRoot(routes)],
+//   exports: [RouterModule],
+// })
+// export class AppRoutingModule {}

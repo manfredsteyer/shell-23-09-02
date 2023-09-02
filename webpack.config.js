@@ -54,30 +54,35 @@
 //  ],
 //};
 
-
 // attempt 1
-//const {
-//  shareAll,
-//  withModuleFederationPlugin,
-//} = require('@angular-architects/module-federation/webpack');
-//
-//module.exports = withModuleFederationPlugin({
-//  // For hosts (please adjust)
-//  remotes: {
-//  },
-//
-//  //shared: {
-//  //  ...shareAll({
-//  //    singleton: true,
-//  //    strictVersion: true,
-//  //    requiredVersion: 'auto'
-//  //  }),
-//  //},
-//
-//  shared: {
-//    ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
-//  }
-//});
+const {
+  shareAll,
+  withModuleFederationPlugin,
+} = require("@angular-architects/module-federation/webpack");
+
+module.exports = withModuleFederationPlugin({
+  // For hosts (please adjust)
+  remotes: {},
+
+  //shared: {
+  //  ...shareAll({
+  //    singleton: true,
+  //    strictVersion: true,
+  //    requiredVersion: 'auto'
+  //  }),
+  //},
+
+  // shared: {},
+  sharedMappings: [],
+
+  shared: {
+    ...shareAll({
+      singleton: true,
+      strictVersion: true,
+      requiredVersion: "auto",
+    }),
+  },
+});
 
 // attempt 2
 //const {
